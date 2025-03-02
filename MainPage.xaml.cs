@@ -33,6 +33,8 @@
 
         private void ChangeMinValue()
         {
+           // max = int.Parse(entryMax.Text);
+
             string text = entryMin.Text.Replace("[a-z][A-Z][а-я][А-Я]", "");
             if (int.TryParse(text.Replace("[]{}-+=/\\|)(", ""), out int res))
             {
@@ -46,10 +48,15 @@
                     max = int.Parse("1" + newMax);
                 }
             }
+
+            entryMin.Text = min.ToString();
+            entryMax.Text = max.ToString();
         }
 
         private void ChangeMaxValue()
         {
+            //min = int.Parse(entryMin.Text);
+
             string text = entryMax.Text.Replace("[a-z][A-Z][а-я][А-Я]", "");
             if (int.TryParse(text.Replace("[]{}-+=/\\|)(", ""), out int res))
             {
@@ -63,6 +70,9 @@
                     min = int.Parse("1" + newMin.Remove(newMin.IndexOf(newMin.Last())));
                 }
             }
+
+            entryMin.Text = min.ToString();
+            entryMax.Text = max.ToString();
         }
 
         private void OnEntryMinTextChanged(object sender, TextChangedEventArgs e)
