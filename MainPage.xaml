@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <!--<Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />-->
+
+            <!--<Label
+                Text="Randomizer"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />-->
+
+            <Label
+                x:Name="LabeMainPage"
+                Text="0"
+                Style="{DynamicResource Headline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click to random" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                 x:Name="SettingsBtn" 
+                 BackgroundColor="DimGrey"
+                 Text="Set MIN and MAX values" 
+                 SemanticProperties.Hint="Sets mix and max values of a new random number"
+                 Clicked="OnSettingsClicked"
+                 HorizontalOptions="Fill" />
+            
+
+            <Entry
+                x:Name="entryMin" 
+                Placeholder="min value" 
+                TextChanged="OnEntryMinTextChanged"
+                Completed="OnEntryMinCompleted"
+                IsVisible="False"
+                Keyboard="Numeric"
+            />
+
+            <Entry
+                 x:Name="entryMax" 
+                 Placeholder="max value" 
+                 TextChanged="OnEntryMaxTextChanged"
+                 Completed="OnEntryMaxCompleted"
+                 IsVisible="False"
+                 Keyboard="Numeric"
+             />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
