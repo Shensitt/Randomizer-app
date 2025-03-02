@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>Rndomizer</ApplicationTitle>
+		<ApplicationTitle>Randomizer</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.shensit.randomizer</ApplicationId>
